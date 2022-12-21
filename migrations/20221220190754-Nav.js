@@ -9,8 +9,8 @@ module.exports = {
         allowNull: false,
         primaryKey: true,
       },
-      nome: {
-        type: Sequelize.STRING(70),
+      name: {
+        type: Sequelize.STRING(50),
         allowNull: false,
       },
       type: {
@@ -26,7 +26,7 @@ module.exports = {
         allowNull: false
       },
       prop: { //propretario
-        type: Sequelize.STRING(70),
+        type: Sequelize.STRING(50),
         allowNull: false
       }
     })

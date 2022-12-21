@@ -11,7 +11,7 @@ module.exports = {
         horario_chegada: new Date(22,12,2022),
         qtd_passageiros:26,
         qtd_carga: 30,
-        IMO_navio: 1,
+        IMO: 1,
         user_id: 3,
 
       },
@@ -22,7 +22,7 @@ module.exports = {
         horario_chegada: new Date(13,12,2022),
         qtd_passageiros:41,
         qtd_carga:45,
-        IMO_navio : 2,
+        IMO : 2,
         user_id: 2,
       },
       {
@@ -32,7 +32,7 @@ module.exports = {
         horario_chegada: new Date(23,12,2022),
         qtd_passageiros:30,
         qtd_carga:40,
-        IMO_navio: 3,
+        IMO: 3,
         user_id: 1,
       },
     ])

@@ -45,7 +45,7 @@ class travel extends Model {
     }
     static associate(models){
         this.belongsTo(models.User, { foreignKey: 'user_id', as: 'user' }) 
-        this.belongsTo(models.Navio, { foreignKey: 'IMO_navio', as: 'navio' })       
+        this.belongsTo(models.Navio, { foreignKey: 'IMO', as: 'navio' })       
     }
 }
 

@@ -13,14 +13,15 @@ const ligar = async () => {
 }
 ligar();
 
+const Nav = require('../models/Nav')
+const User = require('../models/User');
+const travel = require('../models/Travel');
 
-const Viagem = require('../models/Viagem')
-const Navio = require('../models/Navio')
-const User = require('../models/User')
 
-
-Viagem.init(dbConn)
-Navio.init(dbConn)
+travel.init(dbConn)
+Nav.init(dbConn)
 User.init(dbConn)
+
+
 
 module.exports = dbConn

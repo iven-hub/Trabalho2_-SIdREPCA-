@@ -19,10 +19,7 @@ module.exports = {
         type: Sequelize.STRING(120),
         allowNull: false,
       },
-      valido: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: true
-      },
+      
       admin: {
         type: Sequelize.BOOLEAN,
         defaultValue: false

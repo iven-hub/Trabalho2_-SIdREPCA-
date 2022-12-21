@@ -8,7 +8,6 @@ module.exports = {
         id: 1,
         nome: 'Alex Monteiro',
         password: 'aa12ss22',
-        valido: 'true',
         admin: 'false',
         
       },
@@ -16,7 +15,6 @@ module.exports = {
         id: 2,
         nome: 'Paulo silva',
         password: '112351h',
-        valido: 'true',
         admin: 'true',
 
       },
@@ -24,7 +22,6 @@ module.exports = {
         id: 3,
         nome: 'Messi ramos',
         password: 'mm1010cm',
-        valido: 'true',
         admin: 'false',
       }
     ])

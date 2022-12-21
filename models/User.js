@@ -3,10 +3,7 @@ const { Model, DataTypes } = require('sequelize')
 class User extends Model {
     static init(connection) {
         super.init({
-            id: {
-                type: DataTypes.INTEGER,
-                allowNull: false,
-            },
+           
             nome: {
                 type: DataTypes.STRING,
                 allowNull: false,
@@ -25,10 +22,7 @@ class User extends Model {
                     }
                 }
             },
-            valido: {
-                type: DataTypes.BOOLEAN,
-                defaultValue: true,
-            },
+            
             admin: {
                 type: DataTypes.BOOLEAN,
                 defaultValue: false,

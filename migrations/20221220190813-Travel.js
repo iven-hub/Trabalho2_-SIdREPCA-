@@ -11,11 +11,11 @@ module.exports = {
         primaryKey: true,
       },
       partida: {
-        type: Sequelize.STRING(70),
+        type: Sequelize.STRING(50),
         allowNull: false,
       },
       chegada: {
-        type: Sequelize.STRING(70),
+        type: Sequelize.STRING(50),
         allowNull: false,
       },
       horario_part: {
@@ -34,7 +34,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false
       },
-      IMO_navio: {
+      IMO: {
         type: Sequelize.INTEGER,
         defaultValue: null,
         references: { model: 'navio', key: 'IMO'},
