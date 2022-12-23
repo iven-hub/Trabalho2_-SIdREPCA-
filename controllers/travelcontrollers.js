@@ -40,7 +40,7 @@ module.exports = {
         }
     },
     novaViagem: async (req, res) => {
-        const { porto_partida, porto_chegada, horario_partida, horario_chegada, qtd_carga, qtd_Passageiros, user_registo, IMO_navio } = req.body
+        const { partida, chegada, horario_part, horario_chegada, qtd_carga, qtd_Passageiros, user_registo, imo_navio } = req.body
         try {
             if (!password) {
                 return res
@@ -48,7 +48,7 @@ module.exports = {
                   .json({ Error: 'Nao Autorizado' })
               }
 
-            const viagem = await Viagem.create({porto_partida, porto_chegada,  horario_partida, horario_chegada, qtd_carga, qtd_Passageiros, user_registo, IMO_navio });
+            const viagem = await Viagem.create({partida, chegada,  horario_part, horario_chegada, qtd_carga, qtd_Passageiros, user_registo, imo_navio });
             return res.status(201).json({ viagem })
 
         } catch (error) {
@@ -57,7 +57,7 @@ module.exports = {
     },
     atualizarViagem: async (req, res) => {
         const { id } = req.params;
-        const { porto_partida, porto_chegada, horario_partida, horario_chegada, qtd_carga, qtd_Passageiros, user_registo, IMO_navio } = req.body;
+        const { partida, chegada, horario_part, horario_chegada, qtd_carga, qtd_Passageiros, user_registo, imo_navio } = req.body
         try {
             if (!password) {
                 return res
@@ -65,7 +65,7 @@ module.exports = {
                   .json({ Error: 'Nao Autorizado' })
               }
 
-            const viagem = await Viagem.update({ porto_partida, porto_chegada, horario_partida, horario_chegada, qtd_carga, qtd_Passageiros, user_registo, IMO_navio }, { where: { id: id } })
+              const viagem = await Viagem.create({partida, chegada,  horario_part, horario_chegada, qtd_carga, qtd_Passageiros, user_registo, imo_navio }, { where: { id: id } })
 
             res.status(200).json({ viagem });
         } catch (error) {

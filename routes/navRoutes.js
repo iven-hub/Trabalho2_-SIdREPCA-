@@ -6,8 +6,8 @@ router.use(express.json())
 
 router.post('/novoNavio',novoNavio)
 router.get('/',lerTodosNavio)
-router.get('/:IMO',lerUmNavio)
-router.put('/atualizar/:IMO_navio',atualizarNavio)
-router.delete('/delete/:IMO',apagarNavio)
+router.get('/:imo',lerUmNavio)
+router.put('/atualizar/:imo_navio',atualizarNavio)
+router.delete('/delete/:imo',apagarNavio)
 
 module.exports = router

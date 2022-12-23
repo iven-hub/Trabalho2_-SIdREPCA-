@@ -4,7 +4,7 @@
 module.exports = {
   async up (queryInterface, Sequelize) {
     return queryInterface.createTable('navio', {
-      IMO: {
+      imo: {
         type: Sequelize.INTEGER,
         allowNull: false,
         primaryKey: true,

@@ -8,21 +8,21 @@ module.exports = {
         id: 1,
         nome: 'Alex Monteiro',
         password: 'aa12ss22',
-        admin: 'false',
+        admin: false,
         
       },
       {
         id: 2,
         nome: 'Paulo silva',
         password: '112351h',
-        admin: 'true',
+        admin: true,
 
       },
       {
         id: 3,
         nome: 'Messi ramos',
         password: 'mm1010cm',
-        admin: 'false',
+        admin: false,
       }
     ])
   },

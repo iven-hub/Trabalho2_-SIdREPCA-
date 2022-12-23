@@ -5,7 +5,7 @@ module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.bulkInsert('navio',[
       {
-        IMO: 1,
+        imo: 1,
         name: 'fastferry',
         type: 'transport',
         maxCargas:46,
@@ -13,7 +13,7 @@ module.exports = {
         prop: 'nosferry',
       },
       {
-        IMO: 2,
+        imo: 2,
         name: 'tututa',
         type: 'transporte passageiro',
         maxCargas:40,
@@ -21,7 +21,7 @@ module.exports = {
         prop: 'interilhas',
       },
       {
-        IMO: 3,
+        imo: 3,
         name: 'Chiquinho',
         type: 'transporte passageiro',
         maxCargas:50,

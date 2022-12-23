@@ -34,10 +34,10 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false
       },
-      IMO: {
+      imo_navio: {
         type: Sequelize.INTEGER,
         defaultValue: null,
-        references: { model: 'navio', key: 'IMO'},
+        references: { model: 'navio', key: 'imo'},
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
       },

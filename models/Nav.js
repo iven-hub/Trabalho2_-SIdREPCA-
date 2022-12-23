@@ -3,6 +3,7 @@ const { Model, DataTypes } = require('sequelize')
 class Navio extends Model {
     static init(connection) {
         super.init({
+           
             name: {
                 type: DataTypes.STRING,
                 allowNull: false,

@@ -25,9 +25,9 @@ module.exports = {
     },
     novoUsuario: async (req, res) => {
         
-        const { nome, password, admin, valido } = req.body
+        const { nome, password, admin, } = req.body
         try {
-            const user = await User.create({nome,password,valido,admin});
+            const user = await User.create({nome,password,admin});
             return res.status(201).json({ user })
 
         } catch (error) {
@@ -36,9 +36,9 @@ module.exports = {
     },
     atualizarUsuario: async (req, res) => {
         const { id } = req.params;
-        const { nome, password, valido, admin } = req.body;
+        const { nome, password, admin } = req.body;
         try {
-            const user = await User.update({ nome, password, valido, admin }, { where: { id: id } })
+            const user = await User.update({ nome, password, admin }, { where: { id: id } })
 
             res.status(200).json({ user });
         } catch (error) {

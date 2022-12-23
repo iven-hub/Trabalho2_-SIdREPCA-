@@ -3,9 +3,9 @@ const dbConn = require('../db/index')
 Navio.init(dbConn)
 module.exports = {
     lerUmNavio: async (req, res) => {
-        const { IMO } = req.params
+        const { imo } = req.params
         try {
-            const navio = await Navio.findByPk(IMO)
+            const navio = await Navio.findByPk(imo)
             if (!navio) return res.status(400).json({ "Error": "Navio não encontrado" })
             return res.status(200).json(navio)
         } catch (error) {
@@ -25,9 +25,9 @@ module.exports = {
     },
     novoNavio: async (req, res) => {
         
-        const { IMO, nome, tipo, maxCargas, maxPassageiros, proprietario } = req.body
+        const { imo, nome, tipo, maxCargas, maxPassageiros, proprietario } = req.body
         try {
-            const navio = await Navio.create({IMO,nome,tipo,maxCargas,maxPassageiros,proprietario});
+            const navio = await Navio.create({imo,nome,tipo,maxCargas,maxPassageiros,proprietario});
             return res.status(201).json({ navio })
 
         } catch (error) {
@@ -35,10 +35,10 @@ module.exports = {
         }
     },
     atualizarNavio: async (req, res) => {
-        const { IMO_navio } = req.params;
-        const { IMO, nome, tipo, maxCargas, maxPassageiros, proprietario } = req.body;
+        const { imo_navio } = req.params;
+        const { imo, nome, tipo, maxCargas, maxPassageiros, proprietario } = req.body;
         try {
-            const navio = await Navio.update({ IMO, nome, tipo, maxCargas, maxPassageiros, proprietario }, { where: { IMO: IMO_navio } })
+            const navio = await Navio.update({ imo, nome, tipo, maxCargas, maxPassageiros, proprietario }, { where: { imo: imo_navio } })
 
             res.status(200).json({ navio });
         } catch (error) {
@@ -46,9 +46,9 @@ module.exports = {
         }
     },
     apagarNavio: async (req, res) => {
-        const { IMO } = req.params;
+        const { imo } = req.params;
         try {
-            const navio = await Navio.destroy({ where: { IMO: IMO } });
+            const navio = await Navio.destroy({ where: { imo: imo } });
 
             res.status(200).json({ navio });
         } catch (error) {

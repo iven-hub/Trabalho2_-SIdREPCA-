@@ -18,9 +18,10 @@ const User = require('../models/User');
 const travel = require('../models/Travel');
 
 
-travel.init(dbConn)
+
 Nav.init(dbConn)
 User.init(dbConn)
+travel.init(dbConn)
 
 
 
