@@ -17,11 +17,11 @@ module.exports = {
         type: Sequelize.STRING(30),
         allowNull: false,
       },
-      maxCargas: {
+      maxcargas: {
         type: Sequelize.INTEGER,
         allowNull: false
       },
-      maxPassageiros: {
+      maxpassageiros: {
         type: Sequelize.INTEGER,
         allowNull: false
       },

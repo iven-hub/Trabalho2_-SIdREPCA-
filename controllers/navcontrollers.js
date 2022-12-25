@@ -25,9 +25,9 @@ module.exports = {
     },
     novoNavio: async (req, res) => {
         
-        const { imo, nome, tipo, maxCargas, maxPassageiros, proprietario } = req.body
+        const { imo, nome, tipo, maxcargas, maxpassageiros, proprietario } = req.body
         try {
-            const navio = await Navio.create({imo,nome,tipo,maxCargas,maxPassageiros,proprietario});
+            const navio = await Navio.create({imo,nome,tipo,maxcargas,maxpassageiros,proprietario});
             return res.status(201).json({ navio })
 
         } catch (error) {
@@ -36,9 +36,9 @@ module.exports = {
     },
     atualizarNavio: async (req, res) => {
         const { imo_navio } = req.params;
-        const { imo, nome, tipo, maxCargas, maxPassageiros, proprietario } = req.body;
+        const { imo, nome, tipo, maxcargas, maxpassageiros, proprietario } = req.body;
         try {
-            const navio = await Navio.update({ imo, nome, tipo, maxCargas, maxPassageiros, proprietario }, { where: { imo: imo_navio } })
+            const navio = await Navio.update({ imo, nome, tipo, maxcargas, maxpassageiros, proprietario }, { where: { imo: imo_navio } })
 
             res.status(200).json({ navio });
         } catch (error) {

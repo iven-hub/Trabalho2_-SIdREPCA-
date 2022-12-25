@@ -11,3 +11,4 @@ router.put('/atualizar/:id',atualizarUsuario)
 router.delete('/delete/:id',apagarUsuario)
 
 module.exports = router
+

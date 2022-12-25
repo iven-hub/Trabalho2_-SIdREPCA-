@@ -3,7 +3,11 @@ const { Model, DataTypes } = require('sequelize')
 class Navio extends Model {
     static init(connection) {
         super.init({
-           
+            imo: {
+                type: DataTypes.INTEGER,
+                allowNull: false,
+                primaryKey:true
+            },
             name: {
                 type: DataTypes.STRING,
                 allowNull: false,
@@ -22,11 +26,11 @@ class Navio extends Model {
                     },
                 }
             },
-            maxCargas: {
+            maxcargas: {
                 type: DataTypes.INTEGER,
                 allowNull: false,
             },
-            maxPassageiros: {
+            maxpassageiros: {
                 type: DataTypes.INTEGER,
                 allowNull: false,
             },
